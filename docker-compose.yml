@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  database:
+    image: postgres:latest
+    container_name: srt-database
+    environment:
+      POSTGRES_USER: root 
+      POSTGRES_PASSWORD: 1234 
+      POSTGRES_DB: test  
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  
+    ports:
+      - "5432:5432"  
+
+volumes:
+  postgres_data:  
