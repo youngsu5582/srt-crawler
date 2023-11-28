@@ -2,6 +2,12 @@
 /dist
 /node_modules
 
+# Prisma
+prisma/migrations
+
+# Env
+.env
+
 # Logs
 logs
 *.log

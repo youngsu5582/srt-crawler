@@ -1,0 +1,38 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User{
+    id String @id
+    email String @unique
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now()) @updatedAt
+
+    notifications Notifiaction[]
+    presets Preset[]
+
+}
+
+model Preset{
+    id String @id @default(uuid())
+    userId String
+    user User @relation(fields: [userId],references: [id])
+    departure String
+    arrive String
+    number Int
+}
+
+model Notifiaction{
+    id String @id @default(uuid())
+    userId String
+    trailNumber Int
+    date DateTime
+    user User @relation(fields: [userId],references: [id])
+}
