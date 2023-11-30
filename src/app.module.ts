@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
+import { SrtModule } from './module/srt.module';
 
 @Module({
-  imports: [],
+  imports: [SrtModule],
   controllers: [],
   providers: [],
 })

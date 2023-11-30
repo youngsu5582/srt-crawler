@@ -1,5 +1,5 @@
 export function convertNameToStationCode(stationCode: string) {
-  return matchStationTable[stationCode] || null;
+  return matchStationTable[stationCode] || matchStationTable["수서"];
 }
 const matchStationTable: { [x: string]: string } = {
   수서: '0551',
