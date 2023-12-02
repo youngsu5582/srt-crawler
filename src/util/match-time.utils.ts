@@ -1,5 +1,5 @@
-export function convertTimeToDateCode(time: number) {
-  return matchTimeTable[time] || null;
+export function convertTimeToCode(time: number) {
+  return matchTimeTable[time] || matchTimeTable[6];
 }
 const matchTimeTable: { [x: number]: string } = {
   0: '000000',

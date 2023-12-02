@@ -9,9 +9,7 @@ export function wrapData(trainSearchParameters : TrainSearchParameters){
 	,'trnGpCd':'109'
 	,'psgNum':'1'
 	,'seatAttCd':'015'
-	,'isRequest':'Y'
-	,'dptRsStnCdNm':'수서'
-	,'arvRsStnCdNm':'동대구'
+	,'isRequest':'Y'  
 	,"dlayTnumAplFlg":"Y"
 	,'dptDt':trainSearchParameters.departDate
 	,'dptTm':trainSearchParameters.departTimeCode
